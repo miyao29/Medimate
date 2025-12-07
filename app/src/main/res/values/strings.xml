@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Medimate</string>
+
+    <string name="default_web_client_id">
+        748589281414-59isq4bcr5c7uk82bhd471qv50lk36tq.apps.googleusercontent.com
+    </string>
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- 상단 타이틀 영역 (높이 유동화 및 minHeight 적용) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="개인 정보"
+            android:textColor="#4F5A4F"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- 닉네임 (높이/피드백 수정 완료) -->
+    <TextView
+        android:id="@+id/tvNickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_box_light"
+        android:padding="12dp"
+        android:text="닉네임"
+        android:textColor="#4F5A4F"
+        android:textSize="15sp"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <!-- 로그인 방식 (높이/피드백 수정 완료) -->
+    <TextView
+        android:id="@+id/tvProvider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_box_light"
+        android:padding="12dp"
+        android:text="로그인 방식"
+        android:textColor="#4F5A4F"
+        android:textSize="15sp"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <!-- 이메일 (높이/피드백 수정 완료) -->
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_box_light"
+        android:padding="12dp"
+        android:text="이메일"
+        android:textColor="#4F5A4F"
+        android:textSize="15sp"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <!-- 전화번호 (높이/피드백 수정 완료) -->
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_box_light"
+        android:padding="12dp"
+        android:text="전화번호"
+        android:textColor="#4F5A4F"
+        android:textSize="15sp"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="기타"
+        android:textColor="#4F5A4F"
+        android:textSize="16sp" />
+
+    <!-- 로그아웃 버튼 (피드백 유지) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="58dp"
+        android:layout_marginTop="12dp"
+        android:stateListAnimator="@null"
+        android:text="로그아웃"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#545E55"
+        app:cornerRadius="16dp"
+        app:elevation="6dp" />
+
+    <!-- 탈퇴 버튼 (리플 색상 지정 및 피드백 유지) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnWithdraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="58dp"
+        android:layout_marginTop="12dp"
+        android:stateListAnimator="@null"
+        android:text="Medimate 탈퇴"
+        android:textColor="#4F5A4F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="16dp"
+        app:elevation="6dp"
+        app:strokeColor="#4F5A4F"
+        app:strokeWidth="1dp"
+        app:rippleColor="#F5E0E0E0"
+        />
+
+</LinearLayout>

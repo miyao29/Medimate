@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "748589281414",
+    "project_id": "eqqw-2f0a9",
+    "storage_bucket": "eqqw-2f0a9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748589281414:android:309ec34b3cccae2b732107",
+        "android_client_info": {
+          "package_name": "com.example.medimate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748589281414-59isq4bcr5c7uk82bhd471qv50lk36tq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.medimate",
+            "certificate_hash": "7c736942aa72a15da068b517270f4f79ea80e7f3"
+          }
+        },
+        {
+          "client_id": "748589281414-sd50pbbsjtdscku0glrd7d20agtlqv1l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.medimate",
+            "certificate_hash": "e9d1d286ba4350b5c3678f5ce14458c657fc6da1"
+          }
+        },
+        {
+          "client_id": "748589281414-g1noaprel5jud2kaj2j3dudtbflph0dm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYYDIPZNDIsHdPnzD-FvwcDoQ0-mBPYVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748589281414-75lnkfrf8r2aifh8ad92frl3jqiqj8jp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

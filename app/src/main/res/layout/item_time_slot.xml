@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="6dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:background="@drawable/selector_pill_bg">
+
+    <TextView
+        android:id="@+id/tvAmPm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오전"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/selector_pill_text"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1.5dp"
+        android:layout_height="16dp"
+        android:layout_marginHorizontal="8dp"
+        android:background="@color/selector_pill_text" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/selector_pill_text"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+</LinearLayout>

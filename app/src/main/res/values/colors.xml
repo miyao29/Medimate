@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="medimate_bg">#FFFDF7</color>
+    <color name="medimate_primary">#586A5F</color>
+    <color name="medimate_primary_dark">#3E4F45</color>
+    <color name="medimate_primary_light">#E3E9DD</color>
+
+    <color name="kakao_yellow">#FEE500</color>
+    <color name="social_gray">#D8D8D8</color>
+    <color name="social_gray_text">#555555</color>
+    <color name="google_border">#CCCCCC</color>
+
+    <color name="input_border">#C4CEC1</color>
+    <color name="checkbox_text">#555555</color>
+</resources>

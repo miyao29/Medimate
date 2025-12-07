@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- 상단 바 (높이 수정: wrap_content + minHeight 적용) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:text="회원 탈퇴"
+            android:textColor="#4F5A4F"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="129dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:src="@drawable/ic_warning_medimate"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:text="Medimate 계정을 탈퇴하시겠습니까?"
+        android:textColor="#4F5A4F"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 2 버튼 컨테이너 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dp">
+
+        <!-- ⭐ 1. 예 버튼 (탈퇴 확정 기능) - 왼쪽으로 이동 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWithdrawConfirm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="예"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:stateListAnimator="@null"
+            android:layout_marginEnd="8dp"
+            app:backgroundTint="#FF0000"
+            app:cornerRadius="16dp"
+            app:elevation="4dp" />
+
+        <!-- ⭐ 2. 아니오 버튼 (취소 기능) - 오른쪽으로 이동 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWithdrawCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="아니오"
+            android:textColor="#4F5A4F"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:stateListAnimator="@null"
+            android:layout_marginStart="8dp"
+            app:backgroundTint="#FFFFFF"
+            app:cornerRadius="16dp"
+            app:elevation="4dp"
+            app:strokeColor="#4F5A4F"
+            app:strokeWidth="1dp"
+            app:rippleColor="#224F5A4F" />
+
+    </LinearLayout>
+
+</LinearLayout>

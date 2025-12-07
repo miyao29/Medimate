@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:name=".Login.kakaoApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Medimate">
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="8584d06d8efefa1258ffe3dfd1c1ddb6" />
+
+        <activity
+            android:name=".Login.WelcomeActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".Login.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- kakao 로그인 화면으로 이동하기 위한 kakao.sdk에 존재하는 AuthCodeHandlerActivity 추가 -->
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
+                <data
+                    android:host="oauth"
+                    android:scheme="kakao8584d06d8efefa1258ffe3dfd1c1ddb6" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- 나머지는 일반 액티비티 -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".Login.PhoneLoginActivity" />
+        <activity android:name=".Login.SignupMethodActivity" />
+        <activity android:name=".Login.PhoneRegisterActivity" />
+        <activity android:name=".Login.RegisterUserInfoActivity" />
+        <activity android:name=".Login.WithdrawActivity" />
+        <activity android:name=".Login.MyInfoActivity" />
+        <activity
+            android:name=".recommendation.RecommendActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".recommendation.HealthInputActivity"
+            android:exported="false" />
+
+        <activity android:name=".AddMedicationActivity" android:exported="false"/>
+        <receiver android:name=".AlarmReceiver" android:enabled="true" android:exported="false"/>
+
+        <activity android:name=".DrugActivity.MedimateActivity" />
+        <activity android:name=".DrugActivity.DrugListActivity" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:theme="@style/Theme.Medimate.UCrop" />
+
+
+
+    </application>
+
+</manifest>

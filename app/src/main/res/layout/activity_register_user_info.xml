@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:id="@+id/main"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원정보 입력"
+        android:textColor="#5E695E"
+        android:textSize="18sp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/logo_pill"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medimate"
+        android:textColor="#4F5A4F"
+        android:textSize="26sp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="똑똑한 복약 관리"
+        android:textSize="14sp"
+        android:textColor="#6B766B"
+        android:layout_marginBottom="35dp" />
+
+    <EditText
+        android:id="@+id/etNickName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="이름"
+        android:padding="14dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="#333333"
+        android:textColorHint="#878787"
+        android:layout_marginBottom="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="52dp"
+        android:text="가입하기"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_button_green"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:foreground="?attr/selectableItemBackground" />
+
+</LinearLayout>

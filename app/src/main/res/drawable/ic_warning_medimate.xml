@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- 원형 테두리 -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#4F5A4F"
+        android:strokeWidth="1.6"
+        android:pathData="M12,2
+                          A10,10 0 1,1 12,22
+                          A10,10 0 1,1 12,2" />
+
+    <!-- 느낌표 세로줄 -->
+    <path
+        android:fillColor="#4F5A4F"
+        android:pathData="M11.25,7 L12.75,7 L12.75,14 L11.25,14 Z" />
+
+    <!-- 느낌표 점 -->
+    <path
+        android:fillColor="#4F5A4F"
+        android:pathData="M11.25,16 L12.75,16 L12.75,17.5 L11.25,17.5 Z" />
+
+</vector>

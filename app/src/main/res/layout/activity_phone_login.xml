@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="24dp"
+    android:animateLayoutChanges="true">
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textColor="#4F5A4F"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- 안내 -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="서비스 이용을 위해 인증이 필요합니다"
+        android:textColor="#6B766B"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"/>
+
+    <!-- 전화번호 라벨 -->
+    <TextView
+        android:id="@+id/tvPhoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전화번호"
+        android:textColor="#6B766B"
+        android:textSize="12sp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"/>
+
+    <!-- 전화번호 입력칸 (높이 유동화) -->
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="42dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="10dp"
+        android:textColor="#333333"
+        android:hint="전화번호를 입력해주세요."
+        android:textColorHint="#40000000"
+        android:inputType="phone"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/tvPhoneLabel"
+        app:layout_constraintStart_toStartOf="@id/tvPhoneLabel"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 인증요청 버튼 (높이 유동화 및 피드백) -->
+    <TextView
+        android:id="@+id/btnSendCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:background="@drawable/rounded_button_green"
+        android:text="인증요청"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="18dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 인증번호 라벨 -->
+    <TextView
+        android:id="@+id/tvCodeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인증번호"
+        android:textColor="#6B766B"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/btnSendCode"
+        app:layout_constraintStart_toStartOf="@id/etPhone"/>
+
+    <!-- 인증번호 입력칸 (높이 유동화) -->
+    <EditText
+        android:id="@+id/etVerifyCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="42dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="10dp"
+        android:inputType="number"
+        android:textColor="#333333"
+        android:textColorHint="#888888"
+        android:layout_marginTop="6dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tvCodeLabel"
+        app:layout_constraintStart_toStartOf="@id/tvCodeLabel"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 재전송 (피드백 추가) -->
+    <TextView
+        android:id="@+id/btnResend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인증번호 재전송"
+        android:textColor="#6E8F6E"
+        android:textSize="13sp"
+        android:layout_marginTop="6dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toBottomOf="@id/etVerifyCode"
+        app:layout_constraintStart_toStartOf="@id/etVerifyCode"/>
+
+    <!-- 인증하기 버튼 (높이 유동화 및 피드백) -->
+    <TextView
+        android:id="@+id/btnVerifyFinal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:background="@drawable/rounded_button_green"
+        android:text="인증하기"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/btnResend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
