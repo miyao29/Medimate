@@ -11,6 +11,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.medimate.BuildConfig;
 import com.example.medimate.R;
 import com.example.medimate.DrugActivity.LoadingDialog;
 import com.example.medimate.recommendation.api.FoodResponse;
@@ -31,7 +33,7 @@ public class RecommendActivity extends AppCompatActivity {
     // --- 1. API 키 설정 ---
     // 공공데이터포털에서 발급받은 '일반 인증키(Encoding)'입니다.
     // Retrofit 인터페이스에서 @Query(encoded=true) 설정을 했기 때문에 인코딩된 키를 그대로 사용합니다.
-    private final String apiKey = "5vdpC0fiXEBDtS8A/bOV5Ql5cWmDmsIKEcpv4bryubBdLpyXAnET8rszjBUPgqHL3uCOgQhz2GDc/aI3x1CHQg==";
+    private final String apiKey = BuildConfig.PUBLIC_DATA_KEY;
 
     // --- 2. UI 및 어댑터 ---
     private ProductAdapter productAdapter; // 리사이클러뷰에 데이터를 연결해줄 어댑터
@@ -204,8 +206,8 @@ public class RecommendActivity extends AppCompatActivity {
     // [STEP 3] 네이버 쇼핑 API 호출
     // =================================================================
     private void fetchNaverShoppingForGroup(String chipText, String keyword) {
-        String clientId = "4eXlq_OLVRz9jCUBp8Jh"; // 네이버 개발자 ID
-        String clientSecret = "pXCrt0f9Yz";       // 네이버 개발자 Secret
+        String clientId = BuildConfig.NAVER_CLIENT_ID; // 네이버 개발자 ID
+        String clientSecret = BuildConfig.NAVER_CLIENT_SECRET;     // 네이버 개발자 Secret
 
         // 네이버 검색 요청 (유사도순 정렬, 20개 가져오기)
         Call<NaverResponse> call = RetrofitClient.getNaverInstance().searchItems(clientId, clientSecret, keyword, 20, "sim");

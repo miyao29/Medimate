@@ -14,3 +14,5 @@
 .cxx
 local.properties
 app/medimate-5b450-firebase-adminsdk-fbsvc-867907d04c.json
+/app/release
+*.apk

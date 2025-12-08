@@ -41,6 +41,14 @@ android {
         // BuildConfig.OPENAI_API_KEY 변수 생성
         buildConfigField("String", "OPENAI_API_KEY", "\"$apiKey\"")
         // ------------------------------------------------
+        // 네이버 & 공공데이터 키 연결
+        val naverId = localProperties.getProperty("NAVER_CLIENT_ID") ?: ""
+        val naverSecret = localProperties.getProperty("NAVER_CLIENT_SECRET") ?: ""
+        val publicKey = localProperties.getProperty("PUBLIC_DATA_KEY") ?: ""
+
+        buildConfigField("String", "NAVER_CLIENT_ID", "\"$naverId\"")
+        buildConfigField("String", "NAVER_CLIENT_SECRET", "\"$naverSecret\"")
+        buildConfigField("String", "PUBLIC_DATA_KEY", "\"$publicKey\"")
     }
 
     buildTypes {
