@@ -77,7 +77,7 @@ Google ML Kit OCR과 OpenAI GPT-4o를 결합하여 복약 정보를 정밀하게
 ### 1. API Key 설정 (local.properties)
 이 프로젝트는 OpenAI, 네이버, 공공데이터 API Key가 필요합니다. 보안을 위해 키는 Git에 포함되지 않았으므로, 아래 설정이 필수입니다. 
 
-프로젝트 루트 폴더(최상위)에 있는 'local.properties' 파일을 열고, 아래와 같이 본인의 OpenAI API 키를 추가해 주세요.
+프로젝트 루트 폴더(최상위)에 있는 'local.properties' 파일을 열고, 아래와 같이 본인의 각각의 API 키를 추가해 주세요.
 
 Properties
 
