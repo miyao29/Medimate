@@ -8,6 +8,7 @@ Google ML Kit OCR과 OpenAI GPT-4o를 결합하여 복약 정보를 정밀하게
 복약 알람 및 영양제 추천 기능을 통해 통합적인 건강 관리를 지원합니다.
 
 
+
 ## 개발 환경
 
 이 프로젝트는 다음 환경에서 개발되었습니다.
@@ -17,6 +18,7 @@ Google ML Kit OCR과 OpenAI GPT-4o를 결합하여 복약 정보를 정밀하게
 - **Target SDK**: API 36 (Android 16)
 - **IDE**: Android Studio Narwhal (2025.1.1 Patch 1)
 - **Architecture**: MVVM Pattern (ViewModel, LiveData, Repository)
+
 
 
 ## 주요 라이브러리 & API 
@@ -71,6 +73,7 @@ Google ML Kit OCR과 OpenAI GPT-4o를 결합하여 복약 정보를 정밀하게
 - 데이터 동기화: Firestore를 통해 기기를 변경해도 사용자의 복약 기록과 설정이 유지됩니다.
 
 
+
 ## 참고사항
 
 ### 1. API Key 설정 (local.properties)
@@ -94,6 +97,7 @@ PUBLIC_DATA_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 debug 버전으로 구글 및 전화번호 회원가입시 firebase에 인증서 지문 등록이 필수적입니다.
 
 테스트를 위해서는 테스트용 번호 및 인증번호(전화번호: 010-1234-5678 / 인증 번호: 123456)으로  실행하거나 apk 파일로 다운 받아서 release 버전으로 실행해야 합니다.
+
 
 
 ## 팀원 및 역할
